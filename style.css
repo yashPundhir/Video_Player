@@ -28,3 +28,6 @@ video {
 	height: 450px;
 	border-radius: 20px;
 }
+#progress {
+	width: 800px;
+}
