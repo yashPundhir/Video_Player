@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+body {
+	background-color: #101010;
+}
+.parent {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.container {
+	width: 950px;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 30px;
+	background-color: rgba(69, 69, 69, 0.3);
+}
+video {
+	/* border: 1px solid red; */
+	width: 800px;
+	height: 450px;
+	border-radius: 20px;
+}
