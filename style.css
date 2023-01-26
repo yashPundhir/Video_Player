@@ -32,7 +32,7 @@ input[type="range"] {
 	height: auto;
 	-webkit-appearance: none;
 	margin: 0;
-	width: 800px;
+	width: 790px;
 }
 input[type="range"]:focus {
 	outline: none;
@@ -46,6 +46,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 	background: #fff;
 	border-radius: 1px;
 	border: 0px solid #000000;
+	margin-top: -20px;
 }
 input[type="range"]::-webkit-slider-thumb {
 	box-shadow: 0px 0px 0px #000000;
@@ -116,4 +117,10 @@ input[type="range"]:focus::-ms-fill-lower {
 }
 input[type="range"]:focus::-ms-fill-upper {
 	background: #fff;
+}
+.timing {
+	margin-top: -10px;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
 }
