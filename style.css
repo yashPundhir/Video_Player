@@ -124,3 +124,24 @@ input[type="range"]:focus::-ms-fill-upper {
 	display: flex;
 	justify-content: space-between;
 }
+.menu-start {
+	display: flex;
+	gap: 5px;
+}
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+span {
+	color: #fff;
+}
+#play {
+	font-size: 45px;
+}
+#prev {
+	font-size: 30px;
+}
+#next {
+	font-size: 30px;
+}
