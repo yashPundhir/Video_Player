@@ -121,6 +121,11 @@ input[type="range"]:focus::-ms-fill-upper {
 	display: flex;
 	justify-content: space-between;
 }
+.menu-bar {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+}
 .menu-start {
 	display: flex;
 	gap: 5px;
@@ -129,6 +134,11 @@ button {
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
+}
+.menu-mid {
+	display: flex;
+	gap: 10px;
+	margin-left: -400px;
 }
 span {
 	color: #fff;
@@ -141,4 +151,17 @@ span {
 }
 #next {
 	font-size: 30px;
+}
+/* #replay {
+	font-size: 25px;
+}
+#forward {
+	font-size: 25px;
+} */
+#volume {
+	font-size: 22px;
+}
+#volume-bar {
+	all: unset;
+	margin-top: 15px;
 }
