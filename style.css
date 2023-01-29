@@ -116,13 +116,13 @@ input[type="range"]:focus::-ms-fill-upper {
 	background: #fff;
 }
 .timing {
-	margin-top: -10px;
+	margin-top: -5px;
 	color: #fff;
 	display: flex;
 	justify-content: space-between;
 }
 .menu-bar {
-	margin-top: 15px;
+	margin-top: 5px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -164,4 +164,15 @@ span {
 #volume-bar {
 	all: unset;
 	margin-top: 15px;
+}
+.menu-end {
+	display: flex;
+	gap: 10px;
+}
+
+#settings {
+	font-size: 20px;
+}
+#fullscreen {
+	font-size: 27px;
 }
