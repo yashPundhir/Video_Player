@@ -6,6 +6,7 @@ let volumeOn = document.querySelector("#volume");
 let volumeOff = document.querySelector("#volume-off");
 let volumeBar = document.querySelector("#volume-bar");
 let video = document.querySelector(".video-file");
+let progress = document.querySelector("#progress");
 function videoPlay() {
 	playBtn.style.display = "none";
 	pauseBtn.style.display = "inline";
@@ -47,3 +48,9 @@ function volumeUnmute() {
 	volumeOn.style.marginRight = "0px";
 	video.muted = false;
 }
+setInterval(() => {
+	if (video.paused === false) {
+		progress.value = String(video.currentTime);
+		console.log(progress.value);
+	}
+}, 1000);
