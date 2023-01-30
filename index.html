@@ -21,7 +21,7 @@
 		<div class="parent">
 			<div class="container">
 				<div class="video">
-					<video width="800px" height="450px" controls class="video-file">
+					<video width="800px" height="450px" class="video-file">
 						<source
 							src="./Videos/Ant-Man and The Wasp Quantumania.mp4"
 							type="video/mp4"
@@ -46,7 +46,7 @@
 					</div>
 					<div class="menu-bar">
 						<div class="menu-start">
-							<button>
+							<button onclick="videoPrev()">
 								<span class="material-icons" id="prev"> skip_previous </span>
 							</button>
 							<!-- <button>
@@ -63,7 +63,7 @@
 							<!-- <button>
 								<span class="material-icons" id="forward"> forward_10 </span>
 							</button> -->
-							<button>
+							<button onclick="videoNext()">
 								<span class="material-icons" id="next"> skip_next </span>
 							</button>
 						</div>
