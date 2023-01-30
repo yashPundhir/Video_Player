@@ -2,6 +2,9 @@ let playBtn = document.querySelector("#play");
 let pauseBtn = document.querySelector("#pause");
 let nextBtn = document.querySelector("#next");
 let prevBtn = document.querySelector("#prev");
+let volumeOn = document.querySelector("#volume");
+let volumeOff = document.querySelector("#volume-off");
+let volumeBar = document.querySelector("#volume-bar");
 let video = document.querySelector(".video-file");
 function videoPlay() {
 	playBtn.style.display = "none";
@@ -30,4 +33,17 @@ function videoPrev() {
 	video.src = "./Videos/Ant-Man and The Wasp Quantumania.mp4";
 	pauseBtn.style.display = "none";
 	playBtn.style.display = "inline";
+}
+function volumeMute() {
+	volumeOn.style.display = "none";
+	volumeOff.style.display = "inline";
+	volumeOff.style.marginRight = "-20px";
+	volumeBar.style.left = "357.5px";
+	video.muted = true;
+}
+function volumeUnmute() {
+	volumeOff.style.display = "none";
+	volumeOn.style.display = "inline";
+	volumeOn.style.marginRight = "0px";
+	video.muted = false;
 }

@@ -139,7 +139,7 @@ button {
 .menu-mid {
 	display: flex;
 	gap: 10px;
-	margin-left: -400px;
+	margin-left: -550px;
 }
 span {
 	color: #fff;
@@ -175,7 +175,9 @@ span {
 }
 #volume-bar {
 	all: unset;
-	margin-top: 15px;
+	margin-top: 32px;
+	margin-left: 40px;
+	position: absolute;
 }
 .menu-end {
 	display: flex;
