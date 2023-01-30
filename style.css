@@ -27,6 +27,7 @@ video {
 	width: 800px;
 	height: 450px;
 	border-radius: 20px;
+	margin-top: 20px;
 }
 input[type="range"] {
 	height: auto;
@@ -146,11 +147,18 @@ span {
 #play {
 	font-size: 45px;
 }
+#pause {
+	font-size: 45px;
+	display: none;
+}
 #prev {
 	font-size: 30px;
+	opacity: 0.3;
+	margin-right: 3px;
 }
 #next {
 	font-size: 30px;
+	margin-left: 0px;
 }
 /* #replay {
 	font-size: 25px;
@@ -160,6 +168,10 @@ span {
 } */
 #volume {
 	font-size: 22px;
+}
+#volume-off {
+	font-size: 22px;
+	display: none;
 }
 #volume-bar {
 	all: unset;

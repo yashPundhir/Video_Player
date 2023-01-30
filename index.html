@@ -15,14 +15,13 @@
 			href="https://fonts.googleapis.com/icon?family=Material+Icons"
 			rel="stylesheet"
 		/>
-		<script src="./script.js"></script>
 		<title>Video Player</title>
 	</head>
 	<body>
 		<div class="parent">
 			<div class="container">
 				<div class="video">
-					<video width="800px" height="450px" controls>
+					<video width="800px" height="450px" controls class="video-file">
 						<source
 							src="./Videos/Ant-Man and The Wasp Quantumania.mp4"
 							type="video/mp4"
@@ -53,10 +52,13 @@
 							<!-- <button>
 								<span class="material-icons" id="replay"> replay_10 </span>
 							</button> -->
-							<button>
+							<button onclick="videoPlay()">
 								<span class="material-icons" id="play">
 									play_circle_filled
 								</span>
+							</button>
+							<button onclick="videoPause()">
+								<span class="material-icons" id="pause"> pause_circle </span>
 							</button>
 							<!-- <button>
 								<span class="material-icons" id="forward"> forward_10 </span>
@@ -67,9 +69,18 @@
 						</div>
 						<div class="menu-mid">
 							<button>
+								<span class="material-icons" id="volume-off"> volume_off </span>
+							</button>
+							<button>
 								<span class="material-icons" id="volume"> volume_up </span>
 							</button>
-							<input type="range" name="" id="volume-bar" />
+							<input
+								type="range"
+								value="100"
+								min="0"
+								max="100"
+								id="volume-bar"
+							/>
 						</div>
 						<div class="menu-end">
 							<button>
@@ -83,5 +94,6 @@
 				</div>
 			</div>
 		</div>
+		<script src="./script.js"></script>
 	</body>
 </html>
