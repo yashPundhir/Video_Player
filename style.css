@@ -154,7 +154,7 @@ span {
 #prev {
 	font-size: 30px;
 	opacity: 0.3;
-	margin-right: 5px;
+	margin-right: 4px;
 }
 #next {
 	font-size: 30px;
@@ -166,7 +166,7 @@ span {
 #forward {
 	font-size: 25px;
 } */
-#volume {
+#volume-on {
 	font-size: 22px;
 }
 #volume-off {

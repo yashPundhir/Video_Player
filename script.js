@@ -1,12 +1,27 @@
+let videos = [
+	{
+		endTime: "09 : 37",
+		progressMaxValue: 577,
+		src: "./Videos/Markdown syntax Cheat sheet.mp4",
+	},
+	{
+		endTime: "02 : 18",
+		progressMaxValue: 138,
+		src: "./Videos/Ant-Man and The Wasp Quantumania.mp4",
+	},
+];
+let index = 0;
 let playBtn = document.querySelector("#play");
 let pauseBtn = document.querySelector("#pause");
 let nextBtn = document.querySelector("#next");
 let prevBtn = document.querySelector("#prev");
-let volumeOn = document.querySelector("#volume");
+let volumeOn = document.querySelector("#volume-on");
 let volumeOff = document.querySelector("#volume-off");
 let volumeBar = document.querySelector("#volume-bar");
 let video = document.querySelector(".video-file");
 let progress = document.querySelector("#progress");
+let endTime = document.querySelector(".end-time");
+let currentTime = document.querySelector(".current-time");
 function videoPlay() {
 	playBtn.style.display = "none";
 	pauseBtn.style.display = "inline";
@@ -22,18 +37,30 @@ function videoPause() {
 	video.pause();
 }
 function videoNext() {
-	nextBtn.style.opacity = "0.3";
-	prevBtn.style.opacity = "1";
-	video.src = "./Videos/Markdown syntax Cheat sheet.mp4";
-	pauseBtn.style.display = "none";
-	playBtn.style.display = "inline";
+	if (index === 0) {
+		nextBtn.style.opacity = "0.3";
+		prevBtn.style.opacity = "1";
+		video.src = videos[index].src;
+		endTime.textContent = videos[index].endTime;
+		progress.max = videos[index].progressMaxValue;
+		pauseBtn.style.display = "none";
+		playBtn.style.display = "inline";
+		progress.value = 0;
+		index = index + 1;
+	}
 }
 function videoPrev() {
-	prevBtn.style.opacity = "0.3";
-	nextBtn.style.opacity = "1";
-	video.src = "./Videos/Ant-Man and The Wasp Quantumania.mp4";
-	pauseBtn.style.display = "none";
-	playBtn.style.display = "inline";
+	if (index === 1) {
+		prevBtn.style.opacity = "0.3";
+		nextBtn.style.opacity = "1";
+		video.src = videos[index].src;
+		endTime.textContent = videos[index].endTime;
+		progress.max = videos[index].progressMaxValue;
+		pauseBtn.style.display = "none";
+		playBtn.style.display = "inline";
+		progress.value = 0;
+		index = index - 1;
+	}
 }
 function volumeMute() {
 	volumeOn.style.display = "none";
