@@ -89,16 +89,23 @@ function volumeUnmute() {
 setInterval(() => {
 	if (video.paused === false) {
 		progress.value = String(Math.floor(video.currentTime + 0.6));
-		console.log(progress.value);
+		//console.log(progress.value);
 		//console.log(video.currentTime);
-		if (video.currentTime < 10) {
+		if (Math.floor(video.currentTime + 0.6) < 10) {
 			currentTime.textContent = `00 : 0${Math.floor(video.currentTime + 0.6)}`;
-		} else if (video.currentTime >= 10 && video.currentTime < 60) {
+		} else if (
+			Math.floor(video.currentTime + 0.6) >= 10 &&
+			Math.floor(video.currentTime + 0.6) < 60
+		) {
 			currentTime.textContent = `00 : ${Math.floor(video.currentTime + 0.6)}`;
-		} else if (video.currentTime >= 60 && video.currentTime < 120) {
+		} else if (
+			Math.floor(video.currentTime + 0.6) >= 60 &&
+			Math.floor(video.currentTime + 0.6) < 120
+		) {
 			currentTime.textContent = `01 : ${
 				Math.floor(video.currentTime + 0.6) % 60
 			}`;
 		}
+		//console.log(Math.floor(video.currentTime + 0.6));
 	}
 }, 1000);
