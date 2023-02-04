@@ -1,13 +1,18 @@
 let videos = [
 	{
-		endTime: "09 : 37",
-		progressMaxValue: 577,
-		src: "./Videos/Markdown syntax Cheat sheet.mp4",
-	},
-	{
 		endTime: "02 : 18",
 		progressMaxValue: 138,
 		src: "./Videos/Ant-Man and The Wasp Quantumania.mp4",
+	},
+	{
+		endTime: "00 : 15",
+		progressMaxValue: 15,
+		src: "./Videos/SHARK-ira.mp4",
+	},
+	{
+		endTime: "00 : 11",
+		progressMaxValue: 11,
+		src: "./Videos/DancingBear.mp4",
 	},
 ];
 let index = 0;
@@ -37,29 +42,35 @@ function videoPause() {
 	video.pause();
 }
 function videoNext() {
-	if (index === 0) {
-		nextBtn.style.opacity = "0.3";
-		prevBtn.style.opacity = "1";
+	if (index < 2) {
+		if (index === 1) {
+			nextBtn.style.opacity = "0.3";
+			prevBtn.style.opacity = "1";
+		}
+		index = index + 1;
 		video.src = videos[index].src;
 		endTime.textContent = videos[index].endTime;
 		progress.max = videos[index].progressMaxValue;
 		pauseBtn.style.display = "none";
 		playBtn.style.display = "inline";
 		progress.value = 0;
-		index = index + 1;
+		currentTime.textContent = `00 : 00`;
 	}
 }
 function videoPrev() {
-	if (index === 1) {
-		prevBtn.style.opacity = "0.3";
-		nextBtn.style.opacity = "1";
+	if (index > 0) {
+		if (index === 1) {
+			prevBtn.style.opacity = "0.3";
+			nextBtn.style.opacity = "1";
+		}
+		index = index - 1;
 		video.src = videos[index].src;
 		endTime.textContent = videos[index].endTime;
 		progress.max = videos[index].progressMaxValue;
 		pauseBtn.style.display = "none";
 		playBtn.style.display = "inline";
 		progress.value = 0;
-		index = index - 1;
+		currentTime.textContent = `00 : 00`;
 	}
 }
 function volumeMute() {
@@ -77,7 +88,17 @@ function volumeUnmute() {
 }
 setInterval(() => {
 	if (video.paused === false) {
-		progress.value = String(video.currentTime);
+		progress.value = String(Math.floor(video.currentTime + 0.6));
 		console.log(progress.value);
+		//console.log(video.currentTime);
+		if (video.currentTime < 10) {
+			currentTime.textContent = `00 : 0${Math.floor(video.currentTime + 0.6)}`;
+		} else if (video.currentTime >= 10 && video.currentTime < 60) {
+			currentTime.textContent = `00 : ${Math.floor(video.currentTime + 0.6)}`;
+		} else if (video.currentTime >= 60 && video.currentTime < 120) {
+			currentTime.textContent = `01 : ${
+				Math.floor(video.currentTime + 0.6) % 60
+			}`;
+		}
 	}
 }, 1000);
