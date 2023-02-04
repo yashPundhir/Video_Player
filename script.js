@@ -100,9 +100,30 @@ setInterval(() => {
 			currentTime.textContent = `00 : ${Math.floor(video.currentTime + 0.6)}`;
 		} else if (
 			Math.floor(video.currentTime + 0.6) >= 60 &&
+			Math.floor(video.currentTime + 0.6) < 70
+		) {
+			currentTime.textContent = `01 : 0${
+				Math.floor(video.currentTime + 0.6) % 60
+			}`;
+		} else if (
+			Math.floor(video.currentTime + 0.6) >= 70 &&
 			Math.floor(video.currentTime + 0.6) < 120
 		) {
 			currentTime.textContent = `01 : ${
+				Math.floor(video.currentTime + 0.6) % 60
+			}`;
+		} else if (
+			Math.floor(video.currentTime + 0.6) >= 120 &&
+			Math.floor(video.currentTime + 0.6) < 130
+		) {
+			currentTime.textContent = `02 : 0${
+				Math.floor(video.currentTime + 0.6) % 60
+			}`;
+		} else if (
+			Math.floor(video.currentTime + 0.6) >= 130 &&
+			Math.floor(video.currentTime + 0.6) < 180
+		) {
+			currentTime.textContent = `02 : ${
 				Math.floor(video.currentTime + 0.6) % 60
 			}`;
 		}
