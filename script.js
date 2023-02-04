@@ -7,7 +7,7 @@ let videos = [
 	{
 		endTime: "00 : 15",
 		progressMaxValue: 15,
-		src: "./Videos/SHARK-ira.mp4",
+		src: "./Videos/shark-ira_GAm2gPOY.mp4",
 	},
 	{
 		endTime: "00 : 11",
@@ -77,7 +77,7 @@ function volumeMute() {
 	volumeOn.style.display = "none";
 	volumeOff.style.display = "inline";
 	volumeOff.style.marginRight = "-20px";
-	volumeBar.style.left = "357.5px";
+	volumeBar.style.left = "407.5px";
 	video.muted = true;
 }
 function volumeUnmute() {
@@ -130,3 +130,8 @@ setInterval(() => {
 		//console.log(Math.floor(video.currentTime + 0.6));
 	}
 }, 1000);
+function setVolume() {
+	let newVolumeValue = volumeBar.value / 100;
+	video.volume = newVolumeValue;
+	//console.log(volumeBar.value / 100);
+}
