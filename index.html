@@ -20,75 +20,80 @@
 	<body>
 		<div class="parent">
 			<div class="container">
-				<div class="video">
-					<video width="800px" height="450px" class="video-file">
-						<source
-							src="./Videos/Ant-Man and The Wasp Quantumania.mp4"
-							type="video/mp4"
-						/>
-						Your browser does not support the video tag.
-					</video>
-				</div>
-				<div class="menu">
-					<div class="progress-bar">
-						<input
-							type="range"
-							name="range"
-							id="progress"
-							min="0"
-							max="138"
-							value="0"
-						/>
+				<div class="video-player">
+					<div class="video">
+						<video width="800px" height="450px" class="video-file">
+							<source src="./Videos/MyHeroAcademia.mp4" type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
 					</div>
-					<div class="timing">
-						<div class="current-time">00 : 00</div>
-						<div class="end-time">02 : 18</div>
-					</div>
-					<div class="menu-bar">
-						<div class="menu-start">
-							<button onclick="videoPrev()">
-								<span class="material-icons" id="prev"> skip_previous </span>
-							</button>
-							<!-- <button>
-								<span class="material-icons" id="replay"> replay_10 </span>
-							</button> -->
-							<button onclick="videoPlay()">
-								<span class="material-icons" id="play">
-									play_circle_filled
-								</span>
-							</button>
-							<button onclick="videoPause()">
-								<span class="material-icons" id="pause"> pause_circle </span>
-							</button>
-							<!-- <button>
-								<span class="material-icons" id="forward"> forward_10 </span>
-							</button> -->
-							<button onclick="videoNext()">
-								<span class="material-icons" id="next"> skip_next </span>
-							</button>
-						</div>
-						<div class="menu-mid">
-							<button onclick="volumeUnmute()">
-								<span class="material-icons" id="volume-off"> volume_off </span>
-							</button>
-							<button onclick="volumeMute()">
-								<span class="material-icons" id="volume-on"> volume_up </span>
-							</button>
+					<div class="menu">
+						<div class="progress-bar">
 							<input
+								onclick="setProgress()"
 								type="range"
-								value="100"
+								name="range"
+								id="progress"
 								min="0"
-								max="100"
-								id="volume-bar"
+								max="71"
+								value="0"
 							/>
 						</div>
-						<div class="menu-end">
-							<button>
-								<span class="material-icons" id="settings"> settings </span>
-							</button>
-							<button>
-								<span class="material-icons" id="fullscreen"> fullscreen </span>
-							</button>
+						<div class="timing">
+							<div class="current-time">00 : 00</div>
+							<div class="end-time">01 : 11</div>
+						</div>
+						<div class="menu-bar">
+							<div class="menu-start">
+								<button onclick="videoPrev()">
+									<span class="material-icons" id="prev"> skip_previous </span>
+								</button>
+								<!-- <button>
+									<span class="material-icons" id="replay"> replay_10 </span>
+								</button> -->
+								<button onclick="videoPlay()">
+									<span class="material-icons" id="play">
+										play_circle_filled
+									</span>
+								</button>
+								<button onclick="videoPause()">
+									<span class="material-icons" id="pause"> pause_circle </span>
+								</button>
+								<!-- <button>
+									<span class="material-icons" id="forward"> forward_10 </span>
+								</button> -->
+								<button onclick="videoNext()">
+									<span class="material-icons" id="next"> skip_next </span>
+								</button>
+							</div>
+							<div class="menu-mid">
+								<button onclick="volumeUnmute()">
+									<span class="material-icons" id="volume-off">
+										volume_off
+									</span>
+								</button>
+								<button onclick="volumeMute()">
+									<span class="material-icons" id="volume-on"> volume_up </span>
+								</button>
+								<input
+									onclick="setVolume()"
+									type="range"
+									value="100"
+									min="0"
+									max="100"
+									id="volume-bar"
+								/>
+							</div>
+							<div class="menu-end">
+								<button>
+									<span class="material-icons" id="settings"> settings </span>
+								</button>
+								<button>
+									<span class="material-icons" id="fullscreen">
+										fullscreen
+									</span>
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>

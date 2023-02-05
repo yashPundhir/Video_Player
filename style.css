@@ -5,12 +5,14 @@
 	font-family: "Poppins", sans-serif;
 }
 body {
-	background-color: #101010;
+	/* background-color: #101010; */
+	background: radial-gradient(circle at left top, #7c8992, #1b242d);
 }
 .parent {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 .container {
 	width: 950px;
@@ -20,20 +22,34 @@ body {
 	align-items: center;
 	flex-direction: column;
 	border-radius: 30px;
-	background-color: rgba(69, 69, 69, 0.3);
+	/* background-color: rgba(69, 69, 69, 1); */
+	background-color: transparent;
+}
+.video-player {
+	width: 800px;
+	height: 555px;
+	/* border: 1px solid red; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 30px;
+	background-color: transparent;
+	box-shadow: inset -5px -5px 30px #000, inset 10px 10px 40px #000,
+		-20px -20px 30px #1d262f, 20px 20px 30px #151c21;
 }
 video {
 	/* border: 1px solid red; */
-	width: 800px;
-	height: 450px;
+	width: 700px;
+	height: 395px;
 	border-radius: 20px;
-	margin-top: 20px;
+	margin-top: 15px;
 }
 input[type="range"] {
 	height: auto;
 	appearance: none;
 	margin: 0;
-	width: 790px;
+	width: 693px;
 }
 input[type="range"]:focus {
 	outline: none;
@@ -46,7 +62,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 	background: #fff;
 	border-radius: 1px;
 	border: 0px solid #000000;
-	margin-top: -20px;
+	margin-top: -15px;
 }
 input[type="range"]::-webkit-slider-thumb {
 	box-shadow: 0px 0px 0px #000000;
@@ -117,13 +133,13 @@ input[type="range"]:focus::-ms-fill-upper {
 	background: #fff;
 }
 .timing {
-	margin-top: -5px;
+	margin-top: 0px;
 	color: #fff;
 	display: flex;
 	justify-content: space-between;
 }
 .menu-bar {
-	margin-top: 5px;
+	margin-top: 8px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -139,7 +155,7 @@ button {
 .menu-mid {
 	display: flex;
 	gap: 10px;
-	margin-left: -550px;
+	margin-left: -450px;
 }
 span {
 	color: #fff;
@@ -175,8 +191,8 @@ span {
 }
 #volume-bar {
 	all: unset;
-	margin-top: 32px;
-	margin-left: 40px;
+	margin-top: 30.5px;
+	margin-left: 43px;
 	position: absolute;
 }
 .menu-end {

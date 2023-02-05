@@ -1,13 +1,13 @@
 let videos = [
 	{
-		endTime: "02 : 18",
-		progressMaxValue: 138,
-		src: "./Videos/Ant-Man and The Wasp Quantumania.mp4",
+		endTime: "01 : 11",
+		progressMaxValue: 71,
+		src: "./Videos/MyHeroAcademia.mp4",
 	},
 	{
 		endTime: "00 : 15",
 		progressMaxValue: 15,
-		src: "./Videos/shark-ira_GAm2gPOY.mp4",
+		src: "./Videos/Shark-ira.mp4",
 	},
 	{
 		endTime: "00 : 11",
@@ -134,4 +134,10 @@ function setVolume() {
 	let newVolumeValue = volumeBar.value / 100;
 	video.volume = newVolumeValue;
 	//console.log(volumeBar.value / 100);
+}
+function setProgress() {
+	let currentProgressValue = progress.value;
+	video.currentTime = currentProgressValue;
+	currentTime.textContent = `00 : 0${Math.floor(video.currentTime + 0.6) % 60}`;
+	//console.log(currentProgressValue);
 }
